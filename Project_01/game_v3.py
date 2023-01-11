@@ -28,10 +28,10 @@ def random_predict(number:int=1) -> int:
             break 
     return count
 
-def count_attempts(game_score) -> int:
+def count_attempts(random_predict) -> int:
     """За какое количство попыток в среднем за 1000 подходов угадывает наш алгоритм
     Args:
-        game_score ([type]): функция угадывания
+        random_predict ([type]): функция угадывания
     Returns:
         int: среднее количество попыток
     """
@@ -39,7 +39,7 @@ def count_attempts(game_score) -> int:
     random_array = np.random.randint(1, 101, size=(1000)) # загадали список чисел
     
     for number in random_array:
-        attempts.append(game_score(number))
+        attempts.append(random_predict(number))
     score = int(np.mean(attempts)) # находим среднее количество попыток
     print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток')
     return score
