@@ -1,4 +1,4 @@
-# Проект 0. Угадай число
+# Проект 01. Угадай число
 
 ## Оглавление  
 [1. Описание проекта](https://github.com/AlekseyBurchik/Data_Science/blob/main/Project_01)  
